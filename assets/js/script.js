@@ -43,6 +43,7 @@ function focusBlock(event) {
 	var block = event.target;
 	var colorSelected = block.classList[0] + "Selected";
 	block.classList.add(colorSelected);
+	sound.currentTime = 0;
 	sound.play();
 }
 
@@ -114,6 +115,7 @@ function sequentialFocusBlock(arr, callback) {
 	if (arr.length !== 0) {
 		var colorSelected = blocks[arr[0]].classList[0] + "Selected";
 		blocks[arr[0]].classList.add(colorSelected);
+		sound.currentTime = 0;
 		sound.play();
 		setTimeout(function() {
 			blocks[arr[0]].classList.remove(colorSelected);
