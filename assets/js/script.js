@@ -4,17 +4,17 @@ var scoreDisplay = document.querySelector("#score");
 var cntDisplay = document.querySelector("#cnt");
 
 var colorEnumeration = {
-	red: 0,
-	green: 1,
-	blue: 2,
-	yellow: 3
+	green: 0,
+	red: 1,
+	yellow: 2,
+	blue: 3
 };
 
 var beepSounds = {
-	red: document.querySelector("#redBeep"),
-	green: document.querySelector("#greenBeep"),
-	blue: document.querySelector("#blueBeep"),
-	yellow: document.querySelector("#yellowBeep")
+	red: document.querySelector("#red-beep"),
+	green: document.querySelector("#green-beep"),
+	blue: document.querySelector("#blue-beep"),
+	yellow: document.querySelector("#yellow-beep")
 }
 
 var score = 0;

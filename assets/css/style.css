@@ -17,6 +17,22 @@ button {
 	float: left;
 }
 
+.top-left-quarter {
+	border-radius: 100% 0 0 0;
+}
+
+.top-right-quarter {
+	border-radius: 0 100% 0 0;	
+}
+
+.bottom-left-quarter {
+	border-radius: 0 0 0 100%;
+}
+
+.bottom-right-quarter {
+	border-radius: 0 0 100% 0;
+}
+
 .red {
 	background: hsl(0, 100%, 40%);
 }
