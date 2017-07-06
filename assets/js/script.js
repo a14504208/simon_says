@@ -10,6 +10,13 @@ var colorEnumeration = {
 	yellow: 3
 };
 
+var beepSounds = {
+	red: document.querySelector("#redBeep"),
+	green: document.querySelector("#greenBeep"),
+	blue: document.querySelector("#blueBeep"),
+	yellow: document.querySelector("#yellowBeep")
+}
+
 var score = 0;
 var cnt = 1;
 var clickedNum = 0;
@@ -18,6 +25,21 @@ var indexArr = [];
 var _quit = false;
 
 var sound = document.querySelector("#audio");
+
+startBtn.addEventListener("click", function() {
+	_quit = true;
+	// Reset the game
+	score = 0;
+	cnt = 0;
+	indexArr = [];
+
+	cntDisplay.textContent = cnt;
+	scoreDisplay.textContent = score;
+	
+	// Pause for some time to wain for termination of the previous function
+	// In case the button is pressed while playing
+	setTimeout(nextRound, 1000);
+});
 
 function turnOnClick() {
 	blocks.forEach(function(block) {
@@ -41,17 +63,18 @@ function turnOffClick() {
 
 function focusBlock(event) {
 	var block = event.target;
-	var colorSelected = block.classList[0] + "Selected";
+	var color = block.classList[0];
+	var colorSelected = color + "Selected";
 	block.classList.add(colorSelected);
-	sound.currentTime = 0;
-	sound.play();
+	play(color);
 }
 
 function unfocusBlock(event) {
 	var block = event.target;
-	var colorSelected = block.classList[0] + "Selected";
+	var color = block.classList[0];
+	var colorSelected = color + "Selected";
 	block.classList.remove(colorSelected);	
-	sound.pause();
+	pause(color);
 }
 
 function clickEvent(event) {
@@ -72,21 +95,6 @@ function clickEvent(event) {
 	setTimeout(nextRound, 500);
 	}
 }
-
-startBtn.addEventListener("click", function() {
-	_quit = true;
-	// Reset the game
-	score = 0;
-	cnt = 0;
-	indexArr = [];
-
-	cntDisplay.textContent = cnt;
-	scoreDisplay.textContent = score;
-	
-	// Pause for some time to wain for termination of the previous function
-	// In case the button is pressed while playing
-	setTimeout(nextRound, 1000);
-});
 
 function nextRound() {
 	cnt++;
@@ -113,13 +121,14 @@ function sequentialFocusBlock(arr, callback) {
 	}
 
 	if (arr.length !== 0) {
-		var colorSelected = blocks[arr[0]].classList[0] + "Selected";
-		blocks[arr[0]].classList.add(colorSelected);
-		sound.currentTime = 0;
-		sound.play();
+		var block = blocks[arr[0]];
+		var color = block.classList[0];
+		var colorSelected = color + "Selected";
+		block.classList.add(colorSelected);
+		play(color);
 		setTimeout(function() {
 			blocks[arr[0]].classList.remove(colorSelected);
-			sound.pause();
+			pause(color);
 			setTimeout(function() {
 				sequentialFocusBlock(arr.slice(1), callback);	
 			}, 250);			
@@ -130,3 +139,13 @@ function sequentialFocusBlock(arr, callback) {
 	}
 }
 
+// Play the beep for respective color
+function play(color) {
+	beepSounds[color].currentTime = 0;
+	beepSounds[color].play();
+}
+
+// Pause the beep for respective color
+function pause(color) {
+	beepSounds[color].pause();
+}
