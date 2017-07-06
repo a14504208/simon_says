@@ -1,0 +1,64 @@
+p {
+	display: inline-block;
+	width: 30%;
+	margin: 1.66%;
+	float: left;
+}
+
+button {
+	margin: 1.66%;
+	float: left;
+}
+
+.block {
+	width: 40%;
+	padding-bottom: 40%;
+	margin: 5%;
+	float: left;
+}
+
+.red {
+	background: hsl(0, 100%, 40%);
+}
+
+.green {
+	background: hsl(120, 100%, 40%);
+}
+
+.blue {
+	background: hsl(240, 100%, 40%);
+}
+
+.yellow {	
+	background: hsl(60, 100%, 40%);
+}
+
+.redSelected {
+	background: hsl(0, 100%, 50%);
+}
+
+.greenSelected {
+	background: hsl(120, 100%, 50%);
+}
+
+.blueSelected {
+	background: hsl(240, 100%, 50%);
+}
+
+.yellowSelected {	
+	background: hsl(60, 100%, 50%);
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+.clickable:hover {
+	box-shadow: 0 0 3px black;
+}
+
+#container {
+	max-width: 600px;
+	width: 50%;
+	margin: 0 auto;
+}
