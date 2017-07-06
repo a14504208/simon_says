@@ -11,25 +11,34 @@ button {
 }
 
 .block {
+	position: absolute;
 	width: 40%;
 	padding-bottom: 40%;
-	margin: 5%;
 	float: left;
+	z-index: 2;
 }
 
 .top-left-quarter {
+	left: 6.6%;
+	top: 6.6%;
 	border-radius: 100% 0 0 0;
 }
 
 .top-right-quarter {
+	right: 6.6%;
+	top: 6.6%;
 	border-radius: 0 100% 0 0;	
 }
 
 .bottom-left-quarter {
+	left: 6.6%;
+	bottom: 6.6%;
 	border-radius: 0 0 0 100%;
 }
 
 .bottom-right-quarter {
+	right: 6.6%;
+	bottom: 6.6%;
 	border-radius: 0 0 100% 0;
 }
 
@@ -74,7 +83,25 @@ button {
 }
 
 #container {
+	background: #333;
 	max-width: 600px;
-	width: 50%;
+	position: relative;
+	width: 40vw;
+	height: 40vw;
 	margin: 0 auto;
+	border-radius: 50%;
+}
+
+#pannel {
+	background: #ECE7EE;
+	position: absolute;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	margin: auto;
+	width: 50%;
+	height: 50%;
+	border-radius: 50%;
+	z-index: 10;
 }
