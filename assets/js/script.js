@@ -17,6 +17,8 @@ var indexArr = [];
 
 var _quit = false;
 
+var sound = document.querySelector("#audio");
+
 function turnOnClick() {
 	blocks.forEach(function(block) {
 		block.classList.add("clickable");
@@ -41,12 +43,14 @@ function focusBlock(event) {
 	var block = event.target;
 	var colorSelected = block.classList[0] + "Selected";
 	block.classList.add(colorSelected);
+	sound.play();
 }
 
 function unfocusBlock(event) {
 	var block = event.target;
 	var colorSelected = block.classList[0] + "Selected";
 	block.classList.remove(colorSelected);	
+	sound.pause();
 }
 
 function clickEvent(event) {
