@@ -10,6 +10,16 @@ button {
 	float: left;
 }
 
+h1 {
+	margin: 0;
+	font-family: "Alfa Slab One";
+	font-size: 3.5vw;
+	letter-spacing: 0.1em;
+	position: relative;
+	top: 16%;
+	left: 9%;
+}
+
 .block {
 	position: absolute;
 	width: 40%;
@@ -84,7 +94,6 @@ button {
 
 #container {
 	background: #333;
-	max-width: 600px;
 	position: relative;
 	width: 40vw;
 	height: 40vw;
