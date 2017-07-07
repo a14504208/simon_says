@@ -1,6 +1,5 @@
 var blocks = document.querySelectorAll(".block");
 var startBtn = document.querySelector("button");
-var scoreDisplay = document.querySelector("#score");
 var cntDisplay = document.querySelector("#cnt");
 
 var colorEnumeration = {
@@ -17,7 +16,6 @@ var beepSounds = {
 	yellow: document.querySelector("#yellow-beep")
 }
 
-var score = 0;
 var cnt = 1;
 var clickedNum = 0;
 var indexArr = [];
@@ -29,12 +27,10 @@ var sound = document.querySelector("#audio");
 startBtn.addEventListener("click", function() {
 	_quit = true;
 	// Reset the game
-	score = 0;
 	cnt = 0;
 	indexArr = [];
 
 	cntDisplay.textContent = cnt;
-	scoreDisplay.textContent = score;
 	
 	// Pause for some time to wain for termination of the previous function
 	// In case the button is pressed while playing
@@ -90,8 +86,6 @@ function clickEvent(event) {
 	}
 
 	if (clickedNum === cnt) {
-	score++;
-	scoreDisplay.textContent = score;
 	setTimeout(nextRound, 500);
 	}
 }
