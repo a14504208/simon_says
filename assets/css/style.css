@@ -10,11 +10,46 @@ button {
 	float: left;
 }
 
+h1 {
+	margin: 0;
+	font-family: "Alfa Slab One";
+	font-size: 3.5vw;
+	letter-spacing: 0.1em;
+	position: relative;
+	top: 16%;
+	left: 9%;
+}
+
 .block {
+	position: absolute;
 	width: 40%;
 	padding-bottom: 40%;
-	margin: 5%;
 	float: left;
+	z-index: 2;
+}
+
+.top-left-quarter {
+	left: 6.6%;
+	top: 6.6%;
+	border-radius: 100% 0 0 0;
+}
+
+.top-right-quarter {
+	right: 6.6%;
+	top: 6.6%;
+	border-radius: 0 100% 0 0;	
+}
+
+.bottom-left-quarter {
+	left: 6.6%;
+	bottom: 6.6%;
+	border-radius: 0 0 0 100%;
+}
+
+.bottom-right-quarter {
+	right: 6.6%;
+	bottom: 6.6%;
+	border-radius: 0 0 100% 0;
 }
 
 .red {
@@ -57,8 +92,141 @@ button {
 	box-shadow: 0 0 3px black;
 }
 
+.label {
+	font-family: "Oswald";
+	font-size: 0.5vw;
+	text-align: center;
+	margin-top: 3px;
+}
+
+.rw {
+	position: absolute;
+	top: 7vw;
+	left: 1vw;
+	width: 14vw;
+}
+
+
+.power-block {
+	display: inline-block;
+	float: left;
+	width: 1.5vw;
+	height: 1.5vw;
+	margin: 0;
+	background: blue;
+	border: 2px solid #333;
+	border-radius: 15%;
+}
+
+.power-label {
+	font-family: "Oswald";
+	font-size: 0.5vw;
+	display: inline-block;
+	float: left;
+	margin: 0 0.5vw;
+}
+
 #container {
-	max-width: 600px;
-	width: 50%;
+	background: #333;
+	position: relative;
+	width: 40vw;
+	height: 40vw;
 	margin: 0 auto;
+	border-radius: 50%;
+	box-shadow: 0 0 10px black;
+}
+
+#pannel {
+	background: #ECE7EE;
+	position: absolute;
+	top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+	margin: auto;
+	width: 40%;
+	height: 40%;
+	border: 1em solid #333;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+#cnt-display {
+	display: inline-block;
+	width: 30%;
+	margin: 0 3.5%;
+}
+
+#cnt {
+	background: #800000;
+	border: 5px solid #333;
+	border-radius: 17%;
+	color: red;
+	font-size: 2vw;
+	text-align: center;
+	width: 3.5vw;
+
+}
+
+#start-display {
+	display: inline-block;
+	width: 20%;
+	margin: 0 3.5%;
+}
+
+#start {
+	background: red;	
+	width: 1.5vw;
+	height: 1.5vw;
+	border: 5px solid #333;
+	border-radius: 50%;
+	box-shadow: 0 0 3px black;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+#start:active {
+	box-shadow: 0 0 1px black;
+}
+
+#strict-display {
+	display: inline-block;
+	width: 20%;
+	margin: 0 3.5%;
+}
+
+#strict-light {
+	background: black;
+	width: 0.75vw;
+	height: 0.75vw;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 0.25vw;
+}
+
+#strict {
+	background: yellow;	
+	width: 1.5vw;
+	height: 1.5vw;
+	border: 5px solid #333;
+	border-radius: 50%;
+	box-shadow: 0 0 3px black;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+#strict:active {
+	box-shadow: 0 0 1px black;
+}
+
+#power-display {
+	position: relative;
+	left: 3vw;
+}
+
+#slot {
+	border-radius: 15%;
+	background: #333;
+	display: inline-block;
+	float: left;
 }

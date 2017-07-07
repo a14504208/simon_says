@@ -2,41 +2,66 @@
 <html>
 <head>
 	<title>Simon Says</title>
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link type="text/css" rel="stylesheet" href="assets/css/style.css"></link>
 </head>
 <body>
-<h1>Simon Says</h1>
-
-<div>
-	<button>Start</button>
-	<p>Count: <span id="cnt">0</span></p>
-	<p>Score: <span id="score">0</span></p>
-</div>
 
 <div id="container">
-	<div class="red block"></div>
-	<div class="green block"></div>
-	<div class="blue block"></div>
-	<div class="yellow block"></div>	
+	<div class="green top-left-quarter block"></div>
+	<div class="red top-right-quarter block"></div>
+	<div class="yellow bottom-left-quarter block"></div>	
+	<div class="blue bottom-right-quarter block"></div>
+	<div id="pannel">
+		<h1>Simon</h1>
+		<div class="rw">
+			<div id="cnt-display">
+				<div id="cnt">00</div>
+				<h3 class="label">COUNT</h3>
+			</div>
+			<div id="start-display">
+				<div id="start"></div>
+				<h3 class="label">START</h3>
+			</div>
+			<div id="strict-display">
+				<div id="strict-light"></div>
+				<div id="strict"></div>
+				<h3 class="label">STRICT</h3>
+			</div>
+			<div id="power-display">
+				<h3 class="power-label">OFF</h3>
+				<div id="slot">
+					<div class="power-block" id="on"></div> 
+					<div class="power-block" id="off"></div> 
+				</div>
+				<h3 class="power-label">ON</h3>
+			</div>
+		</div>
+
+
+		
+
+	</div>
 </div>
 
 <audio
-  src="assets/sounds/220.wav" id="redBeep" loop>
+  src="assets/sounds/440.wav" id="green-beep" loop>
   Your browser does not support the <code>audio</code> element.
 </audio>
 
 <audio
-  src="assets/sounds/440.wav" id="greenBeep" loop>
+  src="assets/sounds/220.wav" id="red-beep" loop>
   Your browser does not support the <code>audio</code> element.
 </audio>
 
 <audio
-  src="assets/sounds/660.wav" id="blueBeep" loop>
+  src="assets/sounds/880.wav" id="yellow-beep" loop>
   Your browser does not support the <code>audio</code> element.
 </audio>
 
 <audio
-  src="assets/sounds/880.wav" id="yellowBeep" loop>
+  src="assets/sounds/660.wav" id="blue-beep" loop>
   Your browser does not support the <code>audio</code> element.
 </audio>
 
