@@ -82,7 +82,6 @@ function clickEvent(event) {
 	else {
 		alert("You lose");
 		turnOffClick();
-		startBtn.textContent = "Replay";
 	}
 
 	if (clickedNum === cnt) {
