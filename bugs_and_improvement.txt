@@ -1,0 +1,4 @@
+1. Responsive design
+2. Add strict mode
+3. Add power-on, off function
+4. Fix bug when rapidly clicking start
