@@ -139,3 +139,17 @@ h1 {
 	width: 3.5vw;
 
 }
+
+#start-display {
+	position: absolute;
+	top: 8.2vw;
+	left: 7.7vw;
+}
+
+#start {
+	background: black;	
+	width: 2vw;
+	height: 2vw;
+	border-radius: 50%;
+	margin: 0 auto;
+}

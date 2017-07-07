@@ -1,5 +1,5 @@
 var blocks = document.querySelectorAll(".block");
-var startBtn = document.querySelector("button");
+var startBtn = document.querySelector("#start");
 var cntDisplay = document.querySelector("#cnt");
 
 var colorEnumeration = {
