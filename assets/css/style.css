@@ -104,7 +104,26 @@ h1 {
 	top: 7vw;
 	left: 1vw;
 	width: 14vw;
-	height: 5vw;
+}
+
+
+.power-block {
+	display: inline-block;
+	float: left;
+	width: 1.5vw;
+	height: 1.5vw;
+	margin: 0;
+	background: blue;
+	border: 2px solid #333;
+	border-radius: 15%;
+}
+
+.power-label {
+	font-family: "Oswald";
+	font-size: 0.5vw;
+	display: inline-block;
+	float: left;
+	margin: 0 0.5vw;
 }
 
 #container {
@@ -176,6 +195,15 @@ h1 {
 	margin: 0 3.5%;
 }
 
+#strict-light {
+	background: black;
+	width: 0.75vw;
+	height: 0.75vw;
+	border-radius: 50%;
+	margin: 0 auto;
+	margin-bottom: 0.25vw;
+}
+
 #strict {
 	background: yellow;	
 	width: 1.5vw;
@@ -189,4 +217,16 @@ h1 {
 
 #strict:active {
 	box-shadow: 0 0 1px black;
+}
+
+#power-display {
+	position: relative;
+	left: 3vw;
+}
+
+#slot {
+	border-radius: 15%;
+	background: #333;
+	display: inline-block;
+	float: left;
 }
