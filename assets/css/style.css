@@ -114,6 +114,7 @@ h1 {
 	height: 40vw;
 	margin: 0 auto;
 	border-radius: 50%;
+	box-shadow: 0 0 10px black;
 }
 
 #pannel {
