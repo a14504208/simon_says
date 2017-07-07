@@ -169,3 +169,24 @@ h1 {
 #start:active {
 	box-shadow: 0 0 1px black;
 }
+
+#strict-display {
+	display: inline-block;
+	width: 20%;
+	margin: 0 3.5%;
+}
+
+#strict {
+	background: yellow;	
+	width: 1.5vw;
+	height: 1.5vw;
+	border: 5px solid #333;
+	border-radius: 50%;
+	box-shadow: 0 0 3px black;
+	margin: 0 auto;
+	cursor: pointer;
+}
+
+#strict:active {
+	box-shadow: 0 0 1px black;
+}
