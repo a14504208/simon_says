@@ -92,6 +92,13 @@ h1 {
 	box-shadow: 0 0 3px black;
 }
 
+.label {
+	font-family: "Oswald";
+	font-size: 0.5vw;
+	text-align: center;
+	margin-top: 3px;
+}
+
 #container {
 	background: #333;
 	position: relative;
@@ -114,4 +121,21 @@ h1 {
 	border: 1em solid #333;
 	border-radius: 50%;
 	z-index: 10;
+}
+
+#cnt-display {
+	position: absolute;
+	top: 7.5vw;
+	left: 2vw;
+}
+
+#cnt {
+	background: #800000;
+	border: 5px solid #333;
+	border-radius: 17%;
+	color: red;
+	font-size: 2vw;
+	text-align: center;
+	width: 3.5vw;
+
 }
